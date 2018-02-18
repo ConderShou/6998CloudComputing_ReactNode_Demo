@@ -1,0 +1,12 @@
+button {
+    margin: 30px;
+}
+
+.btn {
+    display: inline-block;
+    position: relative;
+    padding: 45px;
+    margin: 100px 55px;
+    font-size: 30px;
+    top: 40%;
+}

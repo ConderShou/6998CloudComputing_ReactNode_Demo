@@ -1,0 +1,16 @@
+.display_table {
+    margin: auto;
+    width: 90%;
+    margin-top: 100px;
+    table-layout: fixed;
+    margin-bottom: 30px;
+}
+
+th {
+    text-align: center;
+    text-decoration: underline;
+}
+td {
+    padding: 1em;
+    text-align: center;
+}
