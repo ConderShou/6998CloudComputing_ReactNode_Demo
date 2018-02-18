@@ -1,0 +1,35 @@
+{
+  "user1" : {
+    "personId" : 19283822,
+    "firstName" : "Jack",
+    "lastName" : "Huos",
+    "dd" : 10,
+    "mm" : 2,
+    "year" : 1923,
+    "email" : "swe@gmail.com",
+    "countryCode" : 321,
+    "phone" : 1232123212
+  },
+  "user2" : {
+    "personId" : 232123,
+    "firstName" : "ASskd",
+    "lastName" : "Cuomp",
+    "dd" : 21,
+    "mm" : 12,
+    "year" : 1233,
+    "email" : "nd232e@gmail.com",
+    "countryCode" : 422,
+    "phone" : 1923723261
+  },
+  "user3" : {
+    "personId" : 12322,
+    "firstName" : "Drewt",
+    "lastName" : "Uip",
+    "dd" : 3,
+    "mm" : 6,
+    "year" : 1623,
+    "email" : "nd232e@gmail.com",
+    "countryCode" : 943,
+    "phone" : 7123212745
+  }
+}
