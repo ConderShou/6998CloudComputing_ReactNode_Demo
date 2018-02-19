@@ -9,12 +9,13 @@ class Delete extends Component {
 
         this.state = {
             id: 0,
-            success: 0
+            success: 0,
+            data: {}
         }
 
         this.deletePerson = this.deletePerson.bind(this);
         this.handleChange = this.handleChange.bind(this);
-        this.successMsg = this.successMsg.bind(this);
+        this.renderNewData = this.renderNewData.bind(this);
     }
 
     deletePerson() {
@@ -36,7 +37,7 @@ class Delete extends Component {
             .then(response => response.json())
             .then(data => {
                 console.log("Data: ", data);
-                this.setState({success: 1});
+                this.setState({success: 1, data: data});
             });
     }
 
@@ -46,11 +47,42 @@ class Delete extends Component {
         this.setState(newState);
     }
 
-    successMsg() {
+    renderNewData() {
         const sent = this.state.success;
-        if (sent) return (<label>Success!</label>);
-        else return (<label>No successful request sent</label>);
+        if (!sent) {
+            return (
+                <label>No successful request sent</label>
+            );
+        } else {
+            const data = this.state.data;
+
+            return Object.keys(data).map(function (key) {
+
+                console.log("user: ", data[key]);
+                // var personId = user.personId;
+                // var firstName = user.firstName;
+                // etc....
+                const { personId, firstName, lastName, dd, mm, year, email, countryCode, phone } = data[key];
+
+                console.log("ID:", personId);
+                return (
+                    /* React requires a key when the user is outputting objects from iteration */
+                    <tr key={personId}>
+                        <td>{personId}</td>
+                        <td>{firstName}</td>
+                        <td>{lastName}</td>
+                        <td>{dd}</td>
+                        <td>{mm}</td>
+                        <td>{year}</td>
+                        <td>{email}</td>
+                        <td>{countryCode}</td>
+                        <td>{phone}</td>
+                    </tr>
+                    );
+            });
+        }
     }
+            
 
     render() {
         return(
@@ -59,7 +91,9 @@ class Delete extends Component {
                 <div className="Delete-create_btn_container">
                     <button className="btn btn-primary Delete-create_btn" onClick={this.deletePerson}>Submit</button>
                 </div>
-                {this.successMsg()}
+                <tbody>
+                    {this.renderNewData()}
+                </tbody>            
             </div>
             );
     }

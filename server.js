@@ -50,10 +50,11 @@ app.post('/addPerson', function (req, res) {
 
     // Add the newPerson to the database
     fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
-        data = JSON.parse( data );
-        data["user4"] = newPerson["user4"];
-        console.log( data );
-        res.end( JSON.stringify(data));
+        parsedData = JSON.parse( data );
+        parsedData[newUser] = newPerson.newUser;
+        console.log(parsedData);
+        
+        res.end( JSON.stringify( parsedData) );
     });
 
 })
