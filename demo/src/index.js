@@ -31,9 +31,9 @@ class App extends Component {
           </div>
 
           <Switch>
-            <Route exact path='/' component={ Home } />
-            <Route path='/list' component={ List } />
-            <Route path='/post' component={ Post } />
+            <Route exact path='/' component= { Home } />
+            <Route path='/list' component= { List } />
+            <Route path='/post' component= { Post } />
             <Route path='/update' component = { Update } />
             <Route path='/delete' component = { Delete } />
           </Switch>

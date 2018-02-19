@@ -11,13 +11,13 @@ class Home extends Component {
         return (
             <div>
                 <Link to='/list'>
-                    <button className="btn btn-primary list-btn">List</button>
+                    <button className="Home-btn btn btn-primary list-btn">List</button>
                 </Link>
                 <Link to='/post'>
-                    <button className="btn btn-secondary post-btn">Post</button>
+                    <button className="Home-btn btn btn-secondary post-btn">Post</button>
                 </Link>
-                <Link to='/update'><button className="btn btn-info update-btn">Update</button></Link>
-                <Link to='/delete'><button className="btn btn-danger update-btn">Delete</button></Link>
+                <Link to='/update'><button className="Home-btn btn btn-info update-btn">Update</button></Link>
+                <Link to='/delete'><button className="Home-btn btn btn-danger update-btn">Delete</button></Link>
             </div>
             );
     }

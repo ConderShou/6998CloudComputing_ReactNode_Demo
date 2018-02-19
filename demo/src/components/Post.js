@@ -8,15 +8,7 @@ class Post extends Component {
         super(props);
 
         this.state = {
-            success: 0,
-            firstName: "",
-            lastName: "",
-            dd: 0,
-            mm: 0,
-            year: 0,
-            email: "",
-            countryCode: 0,
-            phone: 0
+            success: 0
         }
         this.sendPost = this.sendPost.bind(this);
         this.successMsg = this.successMsg.bind(this);
@@ -50,8 +42,8 @@ class Post extends Component {
     }
 
     successMsg() {
-        const send = this.state.success;
-        if (send) return (<label>Success!</label>);
+        const sent = this.state.success;
+        if (sent) return (<label>Success!</label>);
         else return (<label>No successful request sent</label>);
     }
 
@@ -63,9 +55,9 @@ class Post extends Component {
 
     render() {
         return(
-            <div id="form_container">
+            <div id="Post-form_container">
                 <form id="createPostform" onSubmit={this.sendPost}>
-                        <label>First Name</label><input name="firstName" onChange={this.handleChange} type="text" className="form-control"/>                 
+                        <label>First Name</label><input name="firstName" type="text" className="form-control"/>                 
                         <label>Last Name</label><input name="lastName" type="text" className="form-control"/>
                         <label>DD</label><input name="dd" type="text" className="form-control"/>
 
@@ -78,8 +70,8 @@ class Post extends Component {
                         <label>Country Code</label><input name="countryCode" type="text" className="form-control"/>
 
                         <label>Phone</label><input name="phone" type="text" className="form-control"/>
-                    <div className="create_btn_container">
-                        <input type="submit" className="btn btn-primary create_btn" value="Submit" />
+                    <div className="Post-create_btn_container">
+                        <input type="submit" className="btn btn-primary Post-create_btn" value="Submit" />
                     </div>
                     {this.successMsg()}
                     </form>

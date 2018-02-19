@@ -1,0 +1,26 @@
+#Delete-form_container {
+/*    top: 0%;
+    transform: translateY(-50%);*/
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 30px auto 60px;
+}
+form {
+    display: inline-block;
+    text-align: justify;
+    width: 50%;
+}
+
+.Delete-create_btn_container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding: 10px 20px;
+   /* right: 16%;*/
+}
+
+.Delete-create_btn {
+
+    padding: 10px 20px;
+}

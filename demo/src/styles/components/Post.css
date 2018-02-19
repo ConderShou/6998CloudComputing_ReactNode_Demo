@@ -1,4 +1,4 @@
-#form_container {
+#Post-form_container {
 /*    top: 0%;
     transform: translateY(-50%);*/
     display: block;
@@ -11,13 +11,8 @@ form {
     text-align: justify;
     width: 50%;
 }
-.form::after {
-    content: '';
-    width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
-    display: inline-block;
-}
 
-.create_btn_container {
+.Post-create_btn_container {
     display: inline-block;
     position: relative;
     width: 100%;
@@ -25,7 +20,7 @@ form {
    /* right: 16%;*/
 }
 
-.create_btn {
+.Post-create_btn {
 
     padding: 10px 20px;
 }
