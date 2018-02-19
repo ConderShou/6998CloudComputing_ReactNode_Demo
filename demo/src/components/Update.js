@@ -7,7 +7,7 @@ class Update extends Component {
     }
 
     render() {
-        return;
+        return(<label className="update-label">Not shown in demo</label>);
     }
 }
 

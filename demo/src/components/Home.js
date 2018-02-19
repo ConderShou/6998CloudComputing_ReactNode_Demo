@@ -10,10 +10,14 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <button className="btn btn-primary list-btn"><Link to='/list'>List</Link></button>
-                <button className="btn btn-secondary post-btn"><Link to='/post'>Post</Link></button>
-                <button className="btn btn-info update-btn"><Link to='/update'>Update</Link></button>
-                <button className="btn btn-danger update-btn"><Link to='/delete'>Delete</Link></button>
+                <Link to='/list'>
+                    <button className="btn btn-primary list-btn">List</button>
+                </Link>
+                <Link to='/post'>
+                    <button className="btn btn-secondary post-btn">Post</button>
+                </Link>
+                <Link to='/update'><button className="btn btn-info update-btn">Update</button></Link>
+                <Link to='/delete'><button className="btn btn-danger update-btn">Delete</button></Link>
             </div>
             );
     }

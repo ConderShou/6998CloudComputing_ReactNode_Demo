@@ -5,15 +5,22 @@ var url = require('url');
 var http = require('http');
 var uniqid = require('uniq-id')
 var cors = require('cors');
+var bodyParser = require('body-parser');
 
 // the post htttp request url to hit the below function
 // http://localhost:8081/addPerson/?lastName=Gupta&firstName=Kilol&dd=14&mm=08&year=1993&email=kilol.gupta@columbia.edu
 
 //Access-Control-Allow-Origin
 app.use(cors());
+app.use(bodyParser.urlencoded({
+   extended : false
+}));
+app.use(bodyParser.json());
 
 app.post('/addPerson', function (req, res) {
-    var q = url.parse(req.url, true).query;
+    console.log("reqbody: ", req.body);
+    // var q = url.parse(req.url, true).query;
+    var q = req.body;
     var personId = uniqid();
     var lastName = q.lastName;
     var firstName = q.firstName;
@@ -58,7 +65,7 @@ app.get('/listPersons', function (req, res) {
 
 app.delete('/deletePerson', function (req, res) {
 
-    var q = url.parse(req.url, true).query;
+    var q = req.body;
     var personId = q.personId
 
     // delete the person entry in database with 'personId' as the matching personId
@@ -73,7 +80,7 @@ app.delete('/deletePerson', function (req, res) {
 
 app.put('updatePerson', function (req, res) {
 
-    var q = url.parse(req.url, true).query;
+    var q = req.body;
     var personId = q.personId;
     var lastName = q.lastName;
     var firstName = q.firstName;
