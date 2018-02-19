@@ -32,8 +32,10 @@ app.post('/addPerson', function (req, res) {
     var phone = q.phone;
 
     // create the new person's details according the format in which data is stored in db
+    const newUser = "user" + personId;
+
     var newPerson = {
-        "user4" : {
+        newUser: {
             "personId" : personId,
             "firstName" : firstName,
             "lastName" : lastName,
@@ -71,7 +73,7 @@ app.delete('/deletePerson', function (req, res) {
     // delete the person entry in database with 'personId' as the matching personId
     fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
         data = JSON.parse( data );
-        delete data["user" + "eebb946e69fe8bbd251b"];
+        delete data["user" + personId];
 
         console.log( data );
         res.end( JSON.stringify(data));
