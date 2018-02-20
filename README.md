@@ -1,7 +1,7 @@
 # 6998CloudComputing_Demo
 ReactJS + NodeJS Demo for Spring 6998 Cloud Computing
 
-A demonstration of basics in React and communicating with a server backend
+A demonstration of basics in React and of linking the UI to a server backend
 
 1. `cd` inside `demo_server` and run `npm install` to install server.js dependencies
 2. `cd` inside `demo` and `npm install` again to install frontend dependencies
