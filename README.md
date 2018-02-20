@@ -6,13 +6,14 @@ A demonstration of basics in React and of linking the UI to a server backend
 ## Introduction
 - Make sure you have the `npm` package installed. Just google it if you don't have it installed yet.
 - The React code was initially generated with `create-react-script` as detailed in the official React tutorial. I then structured it manually according to best industry practices so feel free to just copy your structure off of mine.
+- The server code is not linked to an actual database server. It's functionality is purely meant for demonstration of NodeJS basics and React server calls.
 
 ## Steps to Run Demo
 
 1. `cd` inside `demo_server` and run `npm install` to install server.js dependencies
 2. `cd` inside `demo` and `npm install` again to install frontend dependencies
-3. Run `npm start` inside the `demo` folder to run React front-end
-4. Run `node server.js` in the root directory to run mock-up server code
+3. Run `npm start` inside the `demo` folder to run the React front-end
+4. Run `node server.js` in the root directory to run the mock-up server code
 
 ## Important Points
 Pay attention to:
