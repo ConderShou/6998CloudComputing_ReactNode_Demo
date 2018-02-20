@@ -20,3 +20,7 @@ Pay attention to:
 - the structure of the code
 - the `render` method in each component and how it uses the rest of the component's functions
 - how the `fetch` method (from the `whatwg-fetch` package) calls the server. This is a good way of calling the server in your own interfaces for your projects and homework assignments.
+
+
+## Should Look Something Like This:
+![demo-gif](https://media.giphy.com/media/58FqbmL91dYjo7GSkJ/giphy.gif)
