@@ -12,8 +12,8 @@ A demonstration of basics in React and of linking the UI to a server backend
 
 1. `cd` inside `demo_server` and run `npm install` to install server.js dependencies
 2. `cd` inside `demo` and `npm install` again to install frontend dependencies
-3. Run `npm start` inside the `demo` folder to run the React front-end
-4. Run `node server.js` in the root directory to run the mock-up server code
+3. Open a terminal window, run `npm start` inside the `demo` folder to run the React front-end
+4. Open a separate terminal window, run `node server.js` in the `demo_server` directory to run the mock-up server code
 
 ## Important Points
 Pay attention to:
