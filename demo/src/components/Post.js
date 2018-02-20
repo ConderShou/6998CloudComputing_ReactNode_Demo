@@ -8,7 +8,8 @@ class Post extends Component {
         super(props);
 
         this.state = {
-            success: 0
+            success: 0,
+            data: {}
         }
         this.sendPost = this.sendPost.bind(this);
         this.successMsg = this.successMsg.bind(this);
@@ -37,13 +38,39 @@ class Post extends Component {
             .then(response => response.json())
             .then(data => {
                 console.log("Data: ", data);
-                this.setState({success: 1});
+                this.setState({data: data, success: 1});
             });
     }
 
     successMsg() {
         const sent = this.state.success;
-        if (sent) return (<label>Success!</label>);
+        if (sent) {
+                const data = this.state.data;
+                return Object.keys(data).map(function (key) {
+
+                console.log("user: ", data[key]);
+                // var personId = user.personId;
+                // var firstName = user.firstName;
+                // etc....
+                const { personId, firstName, lastName, dd, mm, year, email, countryCode, phone } = data[key];
+
+                console.log("ID:", personId);
+                return (
+                    /* React requires a key when the user is outputting objects from iteration */
+                    <tr key={personId}>
+                        <td>{personId}</td>
+                        <td>{firstName}</td>
+                        <td>{lastName}</td>
+                        <td>{dd}</td>
+                        <td>{mm}</td>
+                        <td>{year}</td>
+                        <td>{email}</td>
+                        <td>{countryCode}</td>
+                        <td>{phone}</td>
+                    </tr>
+                    );
+            });
+        }
         else return (<label>No successful request sent</label>);
     }
 
@@ -73,7 +100,9 @@ class Post extends Component {
                     <div className="Post-create_btn_container">
                         <input type="submit" className="btn btn-primary Post-create_btn" value="Submit" />
                     </div>
-                    {this.successMsg()}
+                    <tbody>
+                        {this.successMsg()}
+                    </tbody>
                     </form>
             </div>
             );
